@@ -1,3 +1,3 @@
-# Hello World!
+# HOME
 
-[Privacy](./privacy/)
+## [Privacy](./privacy/)
