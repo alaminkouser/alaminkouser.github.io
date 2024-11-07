@@ -1,3 +1,3 @@
 # HOME
 
-## [Privacy](./privacy/)
+## [Privacy Policy](./privacy/)
