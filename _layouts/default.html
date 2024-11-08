@@ -14,7 +14,7 @@
 {% if page.url == "/" %}
 <ul>
 {% for page in site.pages %}
-{% if page.url | endswith: "/" %}
+{% if page.url and page.url.endswith("/") %}
 <li><a href="{{ page.url }}">{{ page.title }}</a></li>
 {% endif %}
 {% endfor %}
