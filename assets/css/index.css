@@ -25,3 +25,8 @@ a {
 a:hover {
     color: yellow;
 }
+
+.endHR~div {
+    margin-top: 1ch;
+    margin-bottom: 1ch;
+}
