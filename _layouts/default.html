@@ -13,10 +13,8 @@
 {{ content }}
 {% if page.url == "/" %}
 <ul>
-{% for page in site.pages %}
-{% if page.url and page.url.endswith("/") %}
+{% for page in site.html_pages %}
 <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-{% endif %}
 {% endfor %}
 </ul>
 {% endif %}
