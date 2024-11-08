@@ -1,3 +1,1 @@
-# HOME
-
-## [Privacy Policy](./privacy/)
+# Table of Contents
