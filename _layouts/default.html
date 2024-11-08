@@ -11,11 +11,15 @@
 
 <body>
 {{ content }}
+{% if page.url == "/" %}
 <ul>
 {% for page in site.pages %}
+{% if page.url | endswith: "/" %}
 <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+{% else %}
 {% endfor %}
 </ul>
+{% endif %}
 </body>
 
 </html>
