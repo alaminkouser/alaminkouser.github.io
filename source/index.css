@@ -14,4 +14,18 @@ body {
   color: white;
   max-width: 80ch;
   margin: auto;
+  line-height: 1.8;
+}
+
+h1, h2, h3 {
+  color: #00ff00;
+  margin: 20px 0 10px;
+}
+
+p {
+  margin: 10px 0;
+}
+
+strong {
+  color: #ff0000;
 }
