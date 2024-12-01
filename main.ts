@@ -24,5 +24,7 @@ for (let i = 0; i < SOURCE_FILE_LIST.length; i++) {
       file.replace("./source/", "./public/").replace(/\.md$/, ".html"),
       convertMarkdownToHtml(MD_RAW),
     );
+  } else {
+    await Deno.rename(file, file.replace("./source/", "./public/"));
   }
 }
