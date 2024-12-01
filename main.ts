@@ -25,6 +25,6 @@ for (let i = 0; i < SOURCE_FILE_LIST.length; i++) {
       convertMarkdownToHtml(MD_RAW),
     );
   } else {
-    await Deno.rename(file, file.replace("./source/", "./public/"));
+    await Deno.copyFile(file, file.replace("./source/", "./public/"));
   }
 }
