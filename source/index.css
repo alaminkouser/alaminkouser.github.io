@@ -14,12 +14,18 @@ body {
   color: white;
   max-width: 80ch;
   margin: auto;
+  padding: 2rem;
   line-height: 1.8;
+}
+
+h1 {
+  text-align: center;
+  padding-bottom: 4rem;
 }
 
 h1, h2, h3 {
   color: #00ff00;
-  margin: 20px 0 10px;
+  margin: 20px 0 10px 0px;
 }
 
 p {
