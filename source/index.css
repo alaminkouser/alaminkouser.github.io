@@ -17,7 +17,7 @@ body {
   line-height: 1.8;
 }
 
-@media (max-width: calc(80ch + 16px)) {
+@media (max-width: 80ch) {
   body {
     margin: 8px;
   }
