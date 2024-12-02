@@ -17,12 +17,6 @@ body {
   line-height: 1.8;
 }
 
-@media (max-width: 80ch) {
-  body {
-    margin: 8px;
-  }
-}
-
 h1, h2, h3 {
   color: #00ff00;
   margin: 20px 0 10px;
