@@ -1,3 +1,13 @@
+::selection {
+  background-color: gray;
+  color: black;
+}
+
+::moz-selection {
+  background-color: gray;
+  color: black;
+}
+
 *::-webkit-scrollbar {
   display: none;
 }
