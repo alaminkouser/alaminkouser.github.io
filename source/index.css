@@ -32,6 +32,23 @@ p {
   margin: 10px 0;
 }
 
+a {
+  color: lightgray;
+  text-decoration: none;
+  border-bottom: 1px solid gray;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+a:hover {
+  color: white;
+  border-color: white;
+}
+
+a:focus {
+  outline: none;
+  border-color: lightgray;
+}
+
 strong {
   color: darkgray;
 }
