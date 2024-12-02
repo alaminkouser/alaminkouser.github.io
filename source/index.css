@@ -11,7 +11,7 @@ body {
   font-family: monospace;
   font-size: 1.25rem;
   background-color: black;
-  color: darkgray;
+  color: gray;
   max-width: 80ch;
   margin: auto;
   padding: 8rem 2rem;
@@ -24,7 +24,7 @@ h1 {
 }
 
 h1, h2, h3 {
-  color: gray;
+  color: darkgray;
   margin: 20px 0 10px 0px;
 }
 
@@ -33,6 +33,6 @@ p {
 }
 
 strong {
-  color: gray;
+  color: darkgray;
   font-weight: bold;
 }
