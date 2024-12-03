@@ -15,7 +15,7 @@ await prepareBuildDirectory("./public");
 for (let i = 0; i < SOURCE_FILE_LIST.length; i++) {
   const file = SOURCE_FILE_LIST[i];
   await Deno.mkdir(
-    file.replace("./source/", "./public/").substring(0, file.lastIndexOf("/")),
+    file.replace("./source/", "./public/").substring(0, file.replace("./source/", "./public/").lastIndexOf("/")),
     { recursive: true },
   );
   if (file.endsWith(".md")) {
