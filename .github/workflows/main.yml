@@ -21,7 +21,7 @@ jobs:
         uses: denoland/setup-deno@v2
 
       - name: Build site
-        run: deno run --allow-read=./source,./public --allow-write=./public main.ts && deno fmt
+        run: deno run --allow-read=./source,./public,./library/contents --allow-write=./public main.ts && deno fmt
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
