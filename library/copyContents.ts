@@ -32,13 +32,8 @@ export async function copyContents(
         await Deno.copyFile(sourcePath, destPath);
       }
     }
-
-    console.log(`All contents copied from '${sourceDir}' to '${destDir}'.`);
   } catch (error) {
     console.error(`Error copying contents: ${error.message}`);
     throw error;
   }
 }
-
-// Example usage
-// await copyContents("./source", "./destination");

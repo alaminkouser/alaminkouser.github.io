@@ -1,16 +1,18 @@
 import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
 
 export function convertMarkdownToHtml(markdown: string): string {
+  const LEXER = marked.lexer(markdown);
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>${LEXER[0].text}</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" href="/index.css">
 </head>
 <body>
-${marked.parse(markdown)}
+${marked.parser(LEXER)}
 </body>
 </html>`;
 }
