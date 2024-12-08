@@ -1,35 +1,8 @@
-import { listFilesRecursively } from "./library/listFilesRecursively.ts";
 import { prepareBuildDirectory } from "./library/prepareBuildDirectory.ts";
-import { convertMarkdownToHtml } from "./library/convertMarkdownToHtml.ts";
-import { copyContents } from "./library/copyContents.ts";
-
-const SOURCE_FILE_LIST = await listFilesRecursively("./source")
-  .then((list) => {
-    return list;
-  })
-  .catch((_) => {
-    return [];
-  });
+import { mdToHtmlDirectoryProcessor } from "./library/mdToHtmlDirectoryProcessor.ts";
 
 await prepareBuildDirectory("./public");
-await copyContents("./library/contents", "./public");
 
-for (let i = 0; i < SOURCE_FILE_LIST.length; i++) {
-  const file = SOURCE_FILE_LIST[i];
-  await Deno.mkdir(
-    file.replace("./source/", "./public/").substring(
-      0,
-      file.replace("./source/", "./public/").lastIndexOf("/"),
-    ),
-    { recursive: true },
-  );
-  if (file.endsWith(".md")) {
-    const MD_RAW = await Deno.readTextFile(file);
-    await Deno.writeTextFile(
-      file.replace("./source/", "./public/").replace(/\.md$/, ".html"),
-      convertMarkdownToHtml(MD_RAW),
-    );
-  } else {
-    await Deno.copyFile(file, file.replace("./source/", "./public/"));
-  }
-}
+await mdToHtmlDirectoryProcessor("./source", "./public");
+
+await mdToHtmlDirectoryProcessor("./library/contents", "./public");
