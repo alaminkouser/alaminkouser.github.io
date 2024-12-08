@@ -10,38 +10,38 @@ step-by-step guide to help you:
 
 1. Open the Debian Home Page: Go to [debian.org](https://www.debian.org/).
 2. Click `Download` Button: On the homepage, you should see a prominent
-`Download` button or link.
+   `Download` button or link.
 
 ## Buring the iso file
 
-The `dd` command in Linux is a powerful utility for low-level copying and 
+The `dd` command in Linux is a powerful utility for low-level copying and
 conversion of data. To burn an ISO image to a disk (such as a CD or DVD) using
 `dd`, follow these steps. **Be very careful with `dd`, as it can overwrite any
 drive, potentially leading to data loss if used incorrectly.**
 
-1. **Identify the Target Device:**
-First, you need to identify the correct device file for your target disk.
-You can list the available disks and their partitions using `lsblk` or
-`fdisk -l`.
+1. **Identify the Target Device:** First, you need to identify the correct
+   device file for your target disk. You can list the available disks and their
+   partitions using `lsblk` or `fdisk -l`.
 
 ```bash
 lsblk
 ```
 
-Look for a device that corresponds to your CD/DVD drive or USB drive (e.g., `/dev/sdX` or `/dev/sr0`).
+Look for a device that corresponds to your CD/DVD drive or USB drive (e.g.,
+`/dev/sdX` or `/dev/sr0`).
 
-2. **Unmount the Device (if necessary):**
-If the device is mounted, unmount it before proceeding. Replace `/dev/sdX1` with
-your actual partition if it's mounted.
+2. **Unmount the Device (if necessary):** If the device is mounted, unmount it
+   before proceeding. Replace `/dev/sdX1` with your actual partition if it's
+   mounted.
 
 ```bash
 sudo umount /dev/sdX1
 ```
 
-3. **Use `dd` to Write the ISO Image:**
-Execute the `dd` command to write the ISO image to the device. Replace
-`/path/to/your.iso` with the path to your ISO file and `/dev/sdX` with your
-target device (make sure it's the whole device, not a partition).
+3. **Use `dd` to Write the ISO Image:** Execute the `dd` command to write the
+   ISO image to the device. Replace `/path/to/your.iso` with the path to your
+   ISO file and `/dev/sdX` with your target device (make sure it's the whole
+   device, not a partition).
 
 ```bash
 sudo dd if=/path/to/your.iso of=/dev/sdX bs=4M status=progress
@@ -52,15 +52,15 @@ sudo dd if=/path/to/your.iso of=/dev/sdX bs=4M status=progress
 - `bs=4M` sets the block size to 4 megabytes (adjust if needed).
 - `status=progress` shows the progress of the operation.
 
-4. **Sync and Wait:**
-After `dd` completes, it's a good idea to sync the disk to ensure all data is written.
+4. **Sync and Wait:** After `dd` completes, it's a good idea to sync the disk to
+   ensure all data is written.
 
 ```bash
 sudo sync
 ```
 
-5. **Eject the Disk (if necessary):**
-If you're burning to a CD/DVD and want to eject the disk, you can do so with:
+5. **Eject the Disk (if necessary):** If you're burning to a CD/DVD and want to
+   eject the disk, you can do so with:
 
 ```bash
 sudo eject /dev/sdX
@@ -75,10 +75,10 @@ sudo dd if=debian.iso of=/dev/sdb bs=4M status=progress
 **Notes:**
 
 - Double-check the device path (`/dev/sdX`) to ensure you’re writing to the
-correct disk. Mistakenly writing to the wrong device can erase important data.
+  correct disk. Mistakenly writing to the wrong device can erase important data.
 - `dd` does not perform error checking or verification on the written data. If
-you need to verify the integrity of the written disk, you can use additional
-tools like `md5sum` or `sha256sum` to compare checksums.
+  you need to verify the integrity of the written disk, you can use additional
+  tools like `md5sum` or `sha256sum` to compare checksums.
 
 By following these steps, you should be able to burn an ISO image to a disk
 using `dd`.
@@ -123,7 +123,9 @@ type the command below to add user as root:
 ```bash
 sudo usermod -a -G sudo <username>
 ```
+
 After adding user to sudo we need to reboot. Type
+
 ```bash
 reboot
 ```
@@ -136,16 +138,21 @@ check if `sudo` is working we need to type the following command:
 ```bash
 sudo apt update && sudo apt upgrade -y
 ```
+
 If the command works then the `sudo` is working.
 
 ### Adding Auto Login
 
 If we want to auto login to our user then we can type the command:
+
 ```bash
 sudo systemctl edit getty@tty1
 ```
-Then add the following lines after the line that says `Anything between here and
+
+Then add the following lines after the line that says
+`Anything between here and
 the comment below will become the new contents of the file`:
+
 ```bash
 [Service]
 ExecStart=
@@ -191,23 +198,3 @@ command:
 ```bash
 sudo apt install foot --no-install-recommends
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

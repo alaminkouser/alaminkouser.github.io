@@ -64,12 +64,12 @@ strong {
 }
 
 pre {
-	border: 1px solid grey;
-	padding: 1ch;
+  border: 1px solid grey;
+  padding: 1ch;
 }
 
-pre>code {
-	max-width: 100%;
-	overflow: auto;
-	display: inline-grid;
+pre > code {
+  max-width: 100%;
+  overflow: auto;
+  display: inline-grid;
 }
