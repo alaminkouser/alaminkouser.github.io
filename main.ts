@@ -10,12 +10,12 @@ await mdToHtmlDirectoryProcessor("./source", "./public");
 const { index } = await pagefind.createIndex();
 
 // Index all HTML files in a directory
-await index.addDirectory({
+await index!.addDirectory({
   path: "public",
 });
 
 // Or, write the index to disk
-await index.writeFiles({
+await index!.writeFiles({
   outputPath: "public/pagefind",
 });
 
