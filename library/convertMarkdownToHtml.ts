@@ -13,7 +13,10 @@ export function convertMarkdownToHtml(markdown: string): string {
     <link rel="stylesheet" href="/index.css">
 </head>
 <body>
+<input type="text" id="search" placeholder="Search your site..." />
+<div id="search-results"></div>
 ${marked.parser(LEXER)}
+<script src="/index.js" type="module"></script>
 </body>
 </html>`;
 }
