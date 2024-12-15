@@ -9,7 +9,12 @@ searchButton.onclick = () => {
 };
 
 window.addEventListener("DOMContentLoaded", (_) => {
-  new PagefindUI({ element: "#search", showSubResults: true });
+  new PagefindUI({
+    element: "#search",
+    showSubResults: true,
+    showImages: false,
+    autofocus: true
+  });
 });
 
 // searchDialog.showModal();

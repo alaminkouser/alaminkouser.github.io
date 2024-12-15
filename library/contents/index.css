@@ -63,8 +63,6 @@ body > div:nth-of-type(2) {
 
 
 
-
-
 #searchButton {
   display: none;
 }
@@ -72,6 +70,18 @@ body > div:nth-of-type(2) {
 #searchDialog {
   background-color: black;
   color: gray;
+  border-radius: 8px;
+  --pagefind-ui-scale: 1;
+  --pagefind-ui-primary: green;
+  --pagefind-ui-text: grey;
+  --pagefind-ui-background: black;
+  --pagefind-ui-border: grey;
+  --pagefind-ui-tag: teal;
+  --pagefind-ui-border-width: 2px;
+  --pagefind-ui-border-radius: 8px;
+  --pagefind-ui-image-border-radius: 8px;
+  --pagefind-ui-image-box-ratio: 3 / 2;
+  --pagefind-ui-font: monospace, "nf";
 }
 
 #searchDialog::backdrop {
