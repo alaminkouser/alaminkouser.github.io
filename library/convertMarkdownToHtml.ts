@@ -22,6 +22,7 @@ ${marked.parser(LEXER)}
 </div>
 <div>
 <a href="https://github.com/alaminkouser">\uea84</a>
+<a href="tel:+8801671029490">\uf095</a>
 </div>
 <script src="/index.js" type="module"></script>
 </body>
