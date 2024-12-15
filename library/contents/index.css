@@ -1,3 +1,9 @@
+@font-face {
+	font-family: "nf";
+	src: url("/nf.ttf");
+	font-display: swap;
+}
+
 html::-webkit-scrollbar {
   display: none;
 }
@@ -18,7 +24,7 @@ html {
 }
 
 body {
-  font-family: monospace;
+  font-family: monospace, "nf";
   font-size: 1.25rem;
   margin: 2em;
   min-height: calc(100vh - 4em);
@@ -59,6 +65,10 @@ a {
   text-decoration: none;
   border-bottom: 1px solid gray;
   transition: color 0.3s, border-color 0.3s;
+}
+
+body > div:not(:nth-of-type(2)) a {
+  border-bottom: none;
 }
 
 a:hover {
