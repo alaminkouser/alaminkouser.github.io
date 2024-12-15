@@ -1,7 +1,7 @@
 @font-face {
-	font-family: "nf";
-	src: url("/nf.ttf");
-	font-display: swap;
+  font-family: "nf";
+  src: url("/nf.ttf");
+  font-display: swap;
 }
 
 html::-webkit-scrollbar {
