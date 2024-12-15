@@ -1,5 +1,15 @@
-import * as pagefind from "/pagefind/pagefind.js";
-
-const searchButton = document.getElementById("search");
+const searchButton = document.getElementById("searchButton");
+const searchDialog = document.getElementById("searchDialog");
+const searchInput = document.getElementById("searchInput");
 
 searchButton.style.display = "inline";
+
+searchButton.onclick = () => {
+  searchDialog.showModal();
+};
+
+window.addEventListener("DOMContentLoaded", (_) => {
+  new PagefindUI({ element: "#search", showSubResults: true });
+});
+
+// searchDialog.showModal();

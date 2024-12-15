@@ -15,7 +15,10 @@ export function convertMarkdownToHtml(markdown: string): string {
 <body>
 <div>
 <span><a href="/">\ueb06</a></span>
-<span id="search">\uf422</span>
+<span id="searchButton">\uf422</span>
+<dialog id="searchDialog">
+<div id="search"></div>
+</dialog>
 </div>
 <div>
 ${marked.parser(LEXER)}
@@ -24,6 +27,8 @@ ${marked.parser(LEXER)}
 <a href="https://github.com/alaminkouser">\uea84 alaminkouser</a><br>
 <a href="https://www.linkedin.com/in/alaminkouser/">\ue820 alaminkouser</a>
 </div>
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
 <script src="/index.js" type="module"></script>
 </body>
 </html>`;

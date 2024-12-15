@@ -58,9 +58,41 @@ body > div:nth-of-type(2) {
   flex: 1;
 }
 
-#search {
+
+
+
+
+
+
+
+#searchButton {
   display: none;
 }
+
+#searchDialog {
+  background-color: black;
+  color: gray;
+}
+
+#searchDialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#searchDialog input {
+  border: 1px solid gray;
+  background-color: black;
+  color: grey;
+}
+
+#searchDialog input:focus {
+  border-color: lightgray;
+  outline: none;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
+}
+
+
+
+
 
 h1 {
   text-align: center;
