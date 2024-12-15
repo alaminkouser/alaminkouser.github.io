@@ -1,18 +1,8 @@
-::selection {
-  background-color: gray;
-  color: black;
-}
-
-::moz-selection {
-  background-color: gray;
-  color: black;
-}
-
-*::-webkit-scrollbar {
+html::-webkit-scrollbar {
   display: none;
 }
 
-* {
+html {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -20,56 +10,20 @@
 body {
   font-family: monospace;
   font-size: 1.25rem;
-  background-color: black;
-  color: gray;
+  margin: 2em;
+  min-height: calc(100vh - 4em);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+body > div {
+  width: 100%;
   max-width: 80ch;
   margin: auto;
-  padding: 8rem 2rem;
-  line-height: 1.8;
-}
-
-h1 {
-  text-align: center;
-  padding-bottom: 4rem;
-}
-
-h1, h2, h3 {
-  color: darkgray;
-  margin: 20px 0 10px 0px;
-}
-
-p {
-  margin: 2rem 0;
-}
-
-a {
-  color: lightgray;
-  text-decoration: none;
-  border-bottom: 1px solid gray;
-  transition: color 0.3s, border-color 0.3s;
-}
-
-a:hover {
-  color: white;
-  border-color: white;
-}
-
-a:focus {
-  outline: none;
-  border-color: lightgray;
-}
-
-strong {
-  color: darkgray;
 }
 
 pre {
-  border: 1px solid grey;
-  padding: 1ch;
-}
-
-pre > code {
-  max-width: 100%;
-  overflow: auto;
-  display: inline-grid;
+  overflow: scroll; /* Break long words if necessary */
+  max-width: 100%; /* Prevent pre tag from exceeding parent's width */
+  box-sizing: border-box; /* Include padding/border in width calculation */
 }
