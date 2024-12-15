@@ -42,6 +42,18 @@ body > div {
   margin: auto;
 }
 
+body > div:nth-of-type(1) > span {
+  padding: 4px;
+  transition: border-color 0.3s ease, border-width 0.3s ease;
+  border: 2px solid transparent;
+  border-radius: 8px;
+}
+
+body > div:nth-of-type(1) > span:hover {
+  border-color: grey;
+  cursor: pointer;
+}
+
 body > div:nth-of-type(2) {
   flex: 1;
 }
@@ -67,10 +79,6 @@ a {
   transition: color 0.3s, border-color 0.3s;
 }
 
-body > div:not(:nth-of-type(2)) a {
-  border-bottom: none;
-}
-
 a:hover {
   color: white;
   border-color: white;
@@ -79,6 +87,11 @@ a:hover {
 a:focus {
   outline: none;
   border-color: lightgray;
+}
+
+body > div:not(:nth-of-type(2)) a {
+  border-bottom: none;
+  color: grey;
 }
 
 strong {

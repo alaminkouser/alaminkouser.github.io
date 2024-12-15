@@ -13,12 +13,15 @@ export function convertMarkdownToHtml(markdown: string): string {
     <link rel="stylesheet" href="/index.css">
 </head>
 <body>
-<div><a href="/"></a><button></button></div>
+<div>
+<span><a href="/">\ueb06</a></span>
+<span>\uf422</span>
+</div>
 <div>
 ${marked.parser(LEXER)}
 </div>
 <div>
-<a href="https://github.com/alaminkouser"></a>
+<a href="https://github.com/alaminkouser">\uea84</a>
 </div>
 <script src="/index.js" type="module"></script>
 </body>
