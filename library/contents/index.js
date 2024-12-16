@@ -1,20 +1,14 @@
-const searchButton = document.getElementById("searchButton");
-const searchDialog = document.getElementById("searchDialog");
-const searchInput = document.getElementById("searchInput");
+document.querySelector(".searchButton").style.display = "inline";
 
-searchButton.style.display = "inline";
-
-searchButton.onclick = () => {
-  searchDialog.showModal();
+document.querySelector(".searchButton").onclick = () => {
+  document.querySelector(".searchDialog").showModal();
 };
 
 window.addEventListener("DOMContentLoaded", (_) => {
   new PagefindUI({
-    element: "#search",
+    element: ".search",
     showSubResults: true,
     showImages: false,
-    autofocus: true
+    autofocus: true,
   });
 });
-
-// searchDialog.showModal();

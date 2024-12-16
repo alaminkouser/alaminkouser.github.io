@@ -56,18 +56,14 @@ body > div:nth-of-type(1) > span:hover {
 
 body > div:nth-of-type(2) {
   flex: 1;
+  margin-bottom: 100px;
 }
 
-
-
-
-
-
-#searchButton {
+.searchButton {
   display: none;
 }
 
-#searchDialog {
+.searchDialog {
   background-color: black;
   color: gray;
   border-radius: 8px;
@@ -81,28 +77,32 @@ body > div:nth-of-type(2) {
   --pagefind-ui-border-radius: 8px;
   --pagefind-ui-image-border-radius: 8px;
   --pagefind-ui-image-box-ratio: 3 / 2;
-  --pagefind-ui-font: monospace, "nf";
+  --pagefind-ui-font: monospace;
 }
 
-#searchDialog::backdrop {
+.searchDialog::backdrop {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-#searchDialog input {
+.searchDialog::-webkit-scrollbar {
+  display: none;
+}
+
+.searchDialog {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.searchDialog input {
   border: 1px solid gray;
   background-color: black;
   color: grey;
 }
 
-#searchDialog input:focus {
+.searchDialog input:focus {
   border-color: lightgray;
   outline: none;
   box-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
 }
-
-
-
-
 
 h1 {
   text-align: center;

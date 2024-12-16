@@ -1,4 +1,7 @@
-import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
+import { marked } from "npm:marked";
+import { gfmHeadingId } from "npm:marked-gfm-heading-id";
+
+marked.use(gfmHeadingId());
 
 export function convertMarkdownToHtml(markdown: string): string {
   const LEXER = marked.lexer(markdown);
@@ -7,17 +10,17 @@ export function convertMarkdownToHtml(markdown: string): string {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="${LEXER[1].text}">
-    <title>${LEXER[0].text}</title>
+    <meta name="description" content="${LEXER[1].raw.trim()}">
+    <title>${LEXER[0].raw.replace("# ", "").trim()}</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" href="/index.css">
 </head>
 <body>
 <div>
 <span><a href="/">\ueb06</a></span>
-<span id="searchButton">\uf422</span>
-<dialog id="searchDialog">
-<div id="search"></div>
+<span class="searchButton">\uf422</span>
+<dialog class="searchDialog">
+<div class="search"></div>
 </dialog>
 </div>
 <div>
