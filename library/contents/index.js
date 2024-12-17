@@ -1,8 +1,28 @@
-document.querySelector(".searchButton").style.display = "inline";
-
-document.querySelector(".searchButton").onclick = () => {
+if (window.location.hash === "#SEARCH") {
   document.querySelector(".searchDialog").showModal();
+} else {
+  document.querySelector(".searchDialog").close();
+}
+
+onhashchange = (_) => {
+  if (window.location.hash === "#SEARCH") {
+    document.querySelector(".searchDialog").showModal();
+  } else {
+    document.querySelector(".searchDialog").close();
+  }
 };
+
+document.querySelector(".searchDialog").addEventListener("close", () => {
+  if (window.location.hash === "#SEARCH") {
+    history.replaceState(
+      null,
+      null,
+      window.location.pathname + window.location.search,
+    );
+  }
+});
+
+document.querySelector('a[href="#SEARCH"]').style.display = "inline";
 
 window.addEventListener("DOMContentLoaded", (_) => {
   new PagefindUI({

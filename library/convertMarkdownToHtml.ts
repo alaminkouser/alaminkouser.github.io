@@ -10,15 +10,17 @@ export function convertMarkdownToHtml(markdown: string): string {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="${LEXER[1].raw.trim()}">
+    <meta
+      name="description"
+      content="${LEXER[1].raw.trim()}">
     <title>${LEXER[0].raw.replace("# ", "").trim()}</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" href="/index.css">
 </head>
 <body>
 <div>
-<span><a href="/">\ueb06</a></span>
-<span class="searchButton">\uf422</span>
+<a href="/">\ueb06</a>
+<a href="#SEARCH">\uf422</a>
 <dialog class="searchDialog">
 <div class="search"></div>
 </dialog>

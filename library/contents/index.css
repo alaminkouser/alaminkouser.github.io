@@ -42,25 +42,9 @@ body > div {
   margin: auto;
 }
 
-body > div:nth-of-type(1) > span {
-  padding: 4px;
-  transition: border-color 0.3s ease, border-width 0.3s ease;
-  border: 2px solid transparent;
-  border-radius: 8px;
-}
-
-body > div:nth-of-type(1) > span:hover {
-  border-color: grey;
-  cursor: pointer;
-}
-
 body > div:nth-of-type(2) {
   flex: 1;
   margin-bottom: 100px;
-}
-
-.searchButton {
-  display: none;
 }
 
 .searchDialog {
@@ -77,7 +61,12 @@ body > div:nth-of-type(2) {
   --pagefind-ui-border-radius: 8px;
   --pagefind-ui-image-border-radius: 8px;
   --pagefind-ui-image-box-ratio: 3 / 2;
-  --pagefind-ui-font: monospace;
+  --pagefind-ui-font: monospace, "nf";
+}
+
+dialog mark {
+  color: lightgrey !important;
+  background-color: transparent !important;
 }
 
 .searchDialog::backdrop {
@@ -92,17 +81,6 @@ body > div:nth-of-type(2) {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-.searchDialog input {
-  border: 1px solid gray;
-  background-color: black;
-  color: grey;
-}
-
-.searchDialog input:focus {
-  border-color: lightgray;
-  outline: none;
-  box-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
-}
 
 h1 {
   text-align: center;
@@ -116,6 +94,10 @@ h1, h2, h3 {
 
 p {
   margin: 2rem 0;
+}
+
+body > div:not(:nth-of-type(2)) a {
+  border-bottom: none;
 }
 
 a {
@@ -133,11 +115,6 @@ a:hover {
 a:focus {
   outline: none;
   border-color: lightgray;
-}
-
-body > div:not(:nth-of-type(2)) a {
-  border-bottom: none;
-  color: grey;
 }
 
 strong {
